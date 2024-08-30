@@ -1,0 +1,472 @@
+/* Navbar styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+}
+
+.navbar .nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar .navbar-brand img {
+  max-height: 40px;
+}
+
+.navbar .nav-item .nav-link {
+  font-size: 16px;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: #ddd;
+}
+
+/* Optional: Fine-tune the search icon position for various screen sizes */
+.navbar .form-control {
+  padding-right: 40px; /* Space for the icon inside the input */
+}
+
+.navbar .bi-search {
+  font-size: 1.2rem; /* Adjust the size of the search icon */
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: start;
+  padding-left: 100px;
+  align-items: center;
+  text-align: left;
+  padding-top: 80px; /* To make space for the fixed navbar */
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: -1; /* Places the video behind the content */
+}
+
+.hero-content {
+  position: relative;
+  width: 50%;
+  z-index: 1; /* Ensures the content appears above the video */
+}
+
+.hero .container {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  background-color: #ff00ff; /* Update to your preferred button color */
+  border: none;
+  border-radius: 50px;
+}
+
+.hero .btn:hover {
+  background-color: #d400d4; /* Update hover color */
+}
+
+/* Course Categories */
+.container .row .col-md-3 {
+  margin-bottom: 20px;
+}
+
+.container .row .col-md-3 img {
+  border-radius: 50%;
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.container .row .col-md-3 h4 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Welcome Section */
+.container.text-center.my-5 h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.container.text-center.my-5 p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Community Section */
+.community-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.community-section .container .row .col-md-4 img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.community-section .container .row .col-md-4 p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.community-section .container .row .col-md-4 strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.about-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: -1; /* Places the video behind the content */
+}
+
+/* Welcome Section */
+.container-fluid.text-center.my-5 {
+  position: relative;
+  padding: 50px 0;
+}
+
+.container-fluid.text-center.my-5 .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container-fluid.text-center.my-5 .container {
+  position: relative;
+  z-index: 1;
+}
+
+.container-fluid.text-center.my-5 h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.container-fluid.text-center.my-5 p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-container {
+  width: 210px;
+  height: 400px;
+  transform: translate(-27%, 50%);
+  -webkit-perspective: 1100px;
+  -moz-perspective: 1100px;
+  -ms-perspective: 1100px;
+  perspective: 1100px;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  transition: transform 1s;
+  -webkit-animation: rotating 20s linear infinite;
+  -moz-animation: rotating 20s linear infinite;
+  -o-animation: rotating 20s linear infinite;
+  -ms-animation: rotating 20s linear infinite;
+  animation: rotating 20s linear infinite;
+}
+#carousel div {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 120px;
+  border: 2px solid #000;
+}
+#carousel div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#carousel div:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(288px);
+  -moz-transform: rotateY(0deg) translateZ(288px);
+  -ms-transform: rotateY(0deg) translateZ(288px);
+  -o-transform: rotateY(0deg) translateZ(288px);
+  transform: rotateY(0deg) translateZ(288px);
+}
+#carousel div:nth-child(2) {
+  -webkit-transform: rotateY(40deg) translateZ(288px);
+  -moz-transform: rotateY(40deg) translateZ(288px);
+  -ms-transform: rotateY(40deg) translateZ(288px);
+  -o-transform: rotateY(40deg) translateZ(288px);
+  transform: rotateY(40deg) translateZ(288px);
+}
+#carousel div:nth-child(3) {
+  -webkit-transform: rotateY(80deg) translateZ(288px);
+  -moz-transform: rotateY(80deg) translateZ(288px);
+  -ms-transform: rotateY(80deg) translateZ(288px);
+  -o-transform: rotateY(80deg) translateZ(288px);
+  transform: rotateY(80deg) translateZ(288px);
+}
+#carousel div:nth-child(4) {
+  -webkit-transform: rotateY(120deg) translateZ(288px);
+  -moz-transform: rotateY(120deg) translateZ(288px);
+  -ms-transform: rotateY(120deg) translateZ(288px);
+  -o-transform: rotateY(120deg) translateZ(288px);
+  transform: rotateY(120deg) translateZ(288px);
+}
+#carousel div:nth-child(5) {
+  -webkit-transform: rotateY(160deg) translateZ(288px);
+  -moz-transform: rotateY(160deg) translateZ(288px);
+  -ms-transform: rotateY(160deg) translateZ(288px);
+  -o-transform: rotateY(160deg) translateZ(288px);
+  transform: rotateY(160deg) translateZ(288px);
+}
+#carousel div:nth-child(6) {
+  -webkit-transform: rotateY(200deg) translateZ(288px);
+  -moz-transform: rotateY(200deg) translateZ(288px);
+  -ms-transform: rotateY(200deg) translateZ(288px);
+  -o-transform: rotateY(200deg) translateZ(288px);
+  transform: rotateY(200deg) translateZ(288px);
+}
+#carousel div:nth-child(7) {
+  -webkit-transform: rotateY(240deg) translateZ(288px);
+  -moz-transform: rotateY(240deg) translateZ(288px);
+  -ms-transform: rotateY(240deg) translateZ(288px);
+  -o-transform: rotateY(240deg) translateZ(288px);
+  transform: rotateY(240deg) translateZ(288px);
+}
+#carousel div:nth-child(8) {
+  -webkit-transform: rotateY(280deg) translateZ(288px);
+  -moz-transform: rotateY(280deg) translateZ(288px);
+  -ms-transform: rotateY(280deg) translateZ(288px);
+  -o-transform: rotateY(280deg) translateZ(288px);
+  transform: rotateY(280deg) translateZ(288px);
+}
+#carousel div:nth-child(9) {
+  -webkit-transform: rotateY(320deg) translateZ(288px);
+  -moz-transform: rotateY(320deg) translateZ(288px);
+  -ms-transform: rotateY(320deg) translateZ(288px);
+  -o-transform: rotateY(320deg) translateZ(288px);
+  transform: rotateY(320deg) translateZ(288px);
+}
+
+@-moz-keyframes rotating {
+  from {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+@-o-keyframes rotating {
+  from {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform-origin: 60% 50%;
+    -moz-transform-origin: 60% 50%;
+    -o-transform-origin: 60% 50%;
+    -ms-transform-origin: 60% 50%;
+    transform-origin: 60% 50%;
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #6a1b9a;
+  padding-bottom: 20px; /* Align text to the start */
+}
+
+.footer-column {
+  flex: 1;
+  text-align: start;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  color: #888; /* Gray color for links */
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  text-align: left; /* Align text to the start */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.text-Primary {
+  color: #DC28E4;
+}
+
+/*# sourceMappingURL=main.css.map */
