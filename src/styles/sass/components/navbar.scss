@@ -23,3 +23,33 @@
   .navbar .bi-search {
     font-size: 1.2rem; /* Adjust the size of the search icon */
   }
+  /* Custom CSS for large dropdown menu */
+.dropdown-menu {
+  min-width: 600px;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-header {
+  font-weight: bold;
+}
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+/* Ensure the dropdown menu appears smoothly */
+.dropdown-menu {
+  display: none; /* Hide by default */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  margin-top: 0;
+}
+
