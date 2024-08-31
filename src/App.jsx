@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import CourseList from './pages/CourseList';
 import SingleCourse from './pages/SingleCourse';
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   window.addEventListener('scroll', reveal);
@@ -31,7 +33,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<CourseList />} />
-          { <Route path="/course" element={<SingleCourse />} />}
+          <Route path="/course" element={<SingleCourse />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>
