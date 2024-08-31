@@ -1,0 +1,55 @@
+.bg-black {
+    background: black;
+  }
+  
+  .course-list-container {
+    max-width: 800px !important;
+    padding: 20px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #000;
+    margin: auto;
+    font-size: 0.8em;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+  
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+  
+      .category-button {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        padding: 8px 10px;
+        margin: 5px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 0.7em;
+  
+        &.active {
+          background-color: $primary; // Example color for active category
+          color: #000;
+        }
+  
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;  // Change from 'space-evenly' to 'center' to maintain consistent spacing
+      gap: 8px; // Use the same value for gap to ensure equal spacing horizontally and vertically
+    }
+  }
+  

@@ -13,6 +13,9 @@ import student1 from '../assets/person1.jpg';
 import student2 from '../assets/person2.jpg';
 import student3 from '../assets/person3.jpg';
 
+import CreativeLearning from "../components/CreativeLearning";
+import CourseList from "../components/CourseList";
+
 function Home() {
     return (
         <React.Fragment>
@@ -31,7 +34,7 @@ function Home() {
 
             {/* Course Categories */}
             <h2 className="text-center mt-5 fw-bold fs-2 ">Explore Our Diverse Course Categories</h2>
-            <h3 className="text-center mt-3 fw-light fs-3">Discover a wide range of courses tailored to your interests and goals.</h3>
+            <h3 className="text-center mt-3 fw-light fs-5">Discover a wide range of courses tailored to your interests and goals.</h3>
             <div class="container carousel-container">
                 
                 <div id="carousel">
@@ -74,23 +77,27 @@ function Home() {
                 
                 <div className="container text-white">
                     <h2 className="mb-3 fs-1 fw-bolder">The Future of Learning in 3D</h2>
-                    <p className="lead mb-5 fs-3 fw-lighter">
+                    <p className="lead mb-5 fs-6 ">
                         At Immerse, we believe that learning should be more than just reading and watching—it should be an experience. Our platform leverages the power of 3D technology to provide learners with a hands-on, engaging approach to education. Whether you’re exploring a historical event, dissecting a complex molecule, or designing your own 3D models, Immerse makes learning dynamic, interactive, and, most importantly, fun.
                     </p>
                     <h2 className="mb-3 fs-1 fw-bolder">Tailored for Educators and Learners Alike</h2>
-                    <p className="lead mb-5 fs-3 fw-lighter">
+                    <p className="lead mb-5 fs-6 ">
                     Immersive is designed to be intuitive for both educators and students. Teachers can easily create and manage content, track student progress, and tailor the learning experience to individual needs. Meanwhile, students benefit from a personalized, engaging, and accessible learning environment that adapts to their pace and style
                      </p>
                     <h2 className="mb-3 fs-1 fw-bolder">Engage, Interact, and Achieve</h2>
-                    <p className="lead mb-5 fs-3 fw-lighter">
+                    <p className="lead mb-5 fs-6 ">
                     Immersive's platform goes beyond static content by integrating interactive elements that keep learners engaged. Students can manipulate 3D models, collaborate with peers in real-time, and experience complex concepts through immersive simulations. This interactive approach fosters critical thinking and enhances problem-solving skills, setting students up for success.
                      </p>
                     <h2 className="mb-3 fs-1 fw-bolder">Explore a New Dimension of Learning</h2>
-                    <p className="lead mb-5 fs-3 fw-lighter">
+                    <p className="lead mb-5 fs-6 ">
                     With Immersive, learners aren't just passive recipients of information—they are active participants. Our 3D environments allow students to explore subjects in a way that traditional classrooms can't match. From virtual laboratories to historical reconstructions, Immersive provides a hands-on approach to learning that encourages curiosity and deepens understanding.
                      </p>
                 </div>
             </div>
+
+            <CreativeLearning />
+            <div className='bg-black'><CourseList /></div>
+            
 
             {/* Community Section */}
             <div className="community-section py-5">

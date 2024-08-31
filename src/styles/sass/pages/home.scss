@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+// Apply the font-family to the body
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
 /* Hero section styles */
 .hero {
     position: relative;
@@ -32,7 +38,7 @@
   
   .hero h1 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 300;
   }
   
   .hero p.lead {
@@ -67,14 +73,14 @@
   }
   
   .container .row .col-md-3 h4 {
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 10px;
   }
   
   /* Welcome Section */
   .container.text-center.my-5 h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: normal;
   }
   
   .container.text-center.my-5 p {
@@ -144,7 +150,7 @@
   
   .container-fluid.text-center.my-5 h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: normal;
   }
   
   .container-fluid.text-center.my-5 p {
