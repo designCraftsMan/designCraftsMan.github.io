@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
-// Apply the font-family to the body
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 600ms ease;
+}
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
 }
 /* Hero section styles */
 .hero {

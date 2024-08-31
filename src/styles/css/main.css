@@ -1,5 +1,4 @@
 /* Navbar styles */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px 0;
@@ -63,9 +62,31 @@
   margin-top: 0;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  animation: roll 10s linear infinite;
+}
+
+@keyframes roll {
+  to {
+    transform: translate(-60rem);
+  }
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 600ms ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /* Hero section styles */
