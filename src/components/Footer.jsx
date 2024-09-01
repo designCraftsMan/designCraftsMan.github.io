@@ -42,8 +42,8 @@ const Footer = () => {
         <div>
           <h4>Community</h4>
           <ul className="list-unstyled mt-3">
-            <li><Link to="/community/privacy" className="text-decoration-none text-white-50">Privacy</Link></li>
-            <li><Link to="/community/terms" className="text-decoration-none text-white-50">Terms</Link></li>
+            <li><Link to="/privacy" className="text-decoration-none text-white-50">Privacy</Link></li>
+            <li><Link to="/terms" className="text-decoration-none text-white-50">Terms</Link></li>
           </ul>
         </div>
         <div>

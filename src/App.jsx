@@ -8,6 +8,8 @@ import SearchResult from './pages/SearchResult';
 import SingleCourse from './pages/SingleCourse';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 function App() {
   window.addEventListener('scroll', reveal);
@@ -38,6 +40,8 @@ function App() {
           <Route path="/course" element={<SingleCourse />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <Footer />
       </div>
