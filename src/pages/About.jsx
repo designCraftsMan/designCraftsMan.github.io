@@ -5,14 +5,14 @@ import image2 from '../assets/about2.webp';
 function About() {
   return (
     <div className="container mt-5 mb-5 pt-5 pb-5">
-      <section className="text-center my-5">
+      <section className="text-center my-5 py-5">
         <h1 className="mb-4 mb-3 fs-2 fw-bolder">Our Story</h1>
         <p className="lead w-75 m-auto mb-5">
           Whether you’re an educator looking to integrate cutting-edge technology into your curriculum, a student eager to explore immersive learning, or simply have questions about our platform, we’re here to help. Reach out to us with any inquiries, feedback, or support needs, and our dedicated team will ensure you get the assistance you need to make the most of your learning journey with Immerse. 
         </p>
       </section>
 
-      <section className="row align-items-center my-5">
+      <section className="row align-items-center my-5 py-5">
         <div className="col-md-6 order-md-2">
           <img
             src={image1}
@@ -28,7 +28,7 @@ function About() {
         </div>
       </section>
 
-      <section className="row align-items-center my-5">
+      <section className="row align-items-center my-5 py-5">
         <div className="col-md-6">
           <img
             src={image2}

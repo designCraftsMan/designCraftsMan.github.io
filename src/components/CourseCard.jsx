@@ -1,29 +1,34 @@
 import React from 'react';
-import { FaUsers } from "react-icons/fa";
-import { FaStar } from 'react-icons/fa6';
+import { FaUsers, FaStar } from 'react-icons/fa';
 import categorie1 from '../assets/categorie1.jpg';
 import person from '../assets/person1.jpg';
+
 
 const CourseCard = ({ course }) => {
   return (
     <div className="course-card">
-      <img src={categorie1} alt={course.title} className="course-image" />
-      <div className="course-info">
-        <div className="course-rating mb-3">
+      <div className="card-image-wrapper">
+        <img src={categorie1} alt={course.title} className="course-image" />
+        {course.isNew && <span className="new-badge bg-primary">New</span>}
+      </div>
+      <div className="course-info p-3">
+        <div className="course-rating mb-2 d-flex align-items-center">
           {[...Array(5)].map((_, i) => (
             <FaStar key={i} className="star" />
           ))}
-          <span className="course-reviews">({course.reviews})</span>
+          <span className="course-reviews ms-2">(45 Reviews)</span>
         </div>
-        <h3 className="course-title mb-3">{course.title}</h3>
-        <p className="course-enrolled mb-3">
-          <FaUsers /> {course.enrolled} students enrolled
+        <h3 className="course-title mb-2">{course.title}</h3>
+        <p className="course-enrolled mb-2 text-muted d-flex align-items-center">
+          <FaUsers className="me-2" /> 156 students enrolled
         </p>
-        <div className="course-teacher mb-3">
-          <img src={person} alt={course.teacherName} className="teacher-image" />
-          <span>{course.teacherName}</span>
+        <div className="course-teacher d-flex align-items-center">
+          <img src={person} alt={course.teacherName} className="teacher-image me-2" />
+          <span>Oussama Teacher</span>
         </div>
-        <a href="course" className="enroll-btn text-decoration-none fw-bolder ">Learn More</a>
+        <a href="course" className="btn w-100 mt-3 btn-primary d-block text-center text-decoration-none fw-bolder text-white">
+          Learn More
+        </a>
       </div>
     </div>
   );

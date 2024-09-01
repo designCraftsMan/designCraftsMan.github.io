@@ -1,112 +1,41 @@
-import React, { useState } from "react";
-import CourseCard2 from "../components/CourseCard2.jsx";
+import React from 'react';
+import CourseCard from './CourseCard';
 
+const CourseList = (props) => {
+    const { categorie } = props;
 
-const coursesData = [
-  {
-    category: "Music",
-    badge: "Original",
-    students: "9,006",
-    title: "Piano Basics: Learn Notes, Scales & Chords",
-    instructor: "Elijah Fox-Pack",
-    duration: "31m",
-    image: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png"
-  },
-  {
-    category: "Music",
-    badge: "Staff Pick",
-    students: "19,999",
-    title: "Learn Guitar: The Complete Beginners Guide",
-    instructor: "Marc Barnacle",
-    duration: "2h 38m",
-    image: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png"
-  },
-  {
-    category: "Music",
-    students: "4,400",
-    title: "Creative Songwriting For Beginners",
-    instructor: "Eve Horne",
-    duration: "50m",
-    image: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png"
-  },
-  {
-    category: "Music",
-    badge: "Original",
-    students: "9,206",
-    title: "Singing Like a Star: 5 Steps to Discover Your Voice",
-    instructor: "Valerio Morehouse",
-    duration: "1h 18m",
-    image: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png"
-  },
-  {
-    category: "Music",
-    badge: "Staff Pick",
-    students: "7,838",
-    title: "Toplining 101: Melody & Lyrics in Songwriting",
-    instructor: "Clare Dove",
-    duration: "28m",
-    image: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png"
-  },
-];
+    const courses = [
+        { title: "Artificial Intelligence Course", isNew: true, categorie: "artificial-intelligence", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Web Development Course", isNew: false, categorie: "web-development", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Data Science Course", isNew: true, categorie: "data-science", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "CyberSecurity Course", isNew: false, categorie: "cybersecurity", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Biology Course", isNew: true, categorie: "biology", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Chemistry Course", isNew: false, categorie: "chemistry", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Geology Course", isNew: true, categorie: "geology", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Artificial Intelligence Advanced Course", isNew: false, categorie: "artificial-intelligence", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "Physics Course", isNew: true, categorie: "physics", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        { title: "AI & Machine Learning Course", isNew: false, categorie: "artificial-intelligence", rating: 4.5, students: 15, teacher: "Oussama Teacher" },
+        // Add more course objects as needed
+    ];
 
-const categories = [
-  "Featured",
-  "Music",
-  "Drawing & Painting",
-  "Marketing",
-  "Animation",
-  "Social Media",
-  "UI/UX design",
-  "Creative Writing",
-  "Digital Illustration",
-  "Film & Video",
-  "Crafts",
-  "Freelance & Entrepreneurship",
-  "Graphic Design",
-  "Photography",
-  "Productivity"
-];
+    // Filter courses based on the selected category
+    const filteredCourses = categorie === "all" 
+        ? courses 
+        : courses.filter(course => course.categorie.toLowerCase() === categorie.toLowerCase());
 
-const CourseList = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Music");
-
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const filteredCourses = coursesData.filter(
-    (course) => course.category === selectedCategory || selectedCategory === "Featured"
-  );
-
-  return (
-    <div className="course-list-container">
-      <h2>Explore Inspiring Online Courses</h2>
-      <div className="categories">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={`category-button ${category === selectedCategory ? "active" : ""}`}
-            onClick={() => handleCategoryChange(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-      <div className="courses">
-        {filteredCourses.map((course, index) => (
-          <CourseCard2
-            key={index}
-            badge={course.badge}
-            students={course.students}
-            title={course.title}
-            instructor={course.instructor}
-            duration={course.duration}
-            image={course.image}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+    return (
+        <div className="col-md-8 m-auto">
+            <h2 className="mb-4">{categorie === "all" ? "All Courses" : categorie.charAt(0).toUpperCase() + categorie.slice(1)}</h2>
+            <hr className="border border-primary border-3 w-25"/>
+            <div className="row">
+                {filteredCourses.map((course, index) => (
+                    <div key={index} className="col-md-4 mb-4">
+                        <CourseCard course={course} />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 
 export default CourseList;
