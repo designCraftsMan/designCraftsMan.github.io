@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import CourseList from './pages/CourseList';
+import SearchResult from './pages/SearchResult';
 import SingleCourse from './pages/SingleCourse';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses/:categorie" element={<CourseList />} />
+          <Route path="/courses/search/:query" element={<SearchResult />} />
           <Route path="/course" element={<SingleCourse />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

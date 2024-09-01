@@ -23,7 +23,7 @@ function Home() {
                 <div className="hero-content">
                     <h1 className="fw-bolder fs-1">Transform Your Learning Experience with 3D Education</h1>
                     <h2 className="fw-light fs-4">Explore immersive 3D courses designed to take your skills to the next level.</h2>
-                    <a href="#" className="btn btn-primary btn-lg fw-bolder">Start Learning Now!</a>
+                    <a href="#" className="btn btn-primary btn-lg fw-bolder text-white">Start Learning Now!</a>
                 </div>
             </div>
         {/* Course Categories */}

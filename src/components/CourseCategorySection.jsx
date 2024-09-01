@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CourseCategorySection = ({ categorie }) => {
     // Helper function to determine active class
     const getClassNames = (category) => {
-        return `list-group-item ${categorie === category ? 'fw-bold active' : ''}`;
+        return `list-group-item ${categorie === category ? 'fw-bold active text-white' : ''}`;
     };
 
     return (
@@ -16,14 +16,14 @@ const CourseCategorySection = ({ categorie }) => {
 
                 <h5 className="my-3">Technology</h5>
                 <ul className="list-group">
-                    <li className={getClassNames('web-development')}>
-                        <Link to="/courses/web-development" className="text-decoration-none text-dark">Web Development</Link>
+                    <li className={getClassNames('web development')}>
+                        <Link to="/courses/web development" className="text-decoration-none text-dark">Web Development</Link>
                     </li>
-                    <li className={getClassNames('data-science')}>
-                        <Link to="/courses/data-science" className="text-decoration-none text-dark">Data Science</Link>
+                    <li className={getClassNames('data science')}>
+                        <Link to="/courses/data science" className="text-decoration-none text-dark">Data Science</Link>
                     </li>
-                    <li className={getClassNames('artificial-intelligence')}>
-                        <Link to="/courses/artificial-intelligence" className="text-decoration-none text-dark">Artificial Intelligence</Link>
+                    <li className={getClassNames('artificial intelligence')}>
+                        <Link to="/courses/artificial intelligence" className="text-decoration-none text-dark">Artificial Intelligence</Link>
                     </li>
                     <li className={getClassNames('cybersecurity')}>
                         <Link to="/courses/cybersecurity" className="text-decoration-none text-dark">CyberSecurity</Link>
@@ -39,7 +39,7 @@ const CourseCategorySection = ({ categorie }) => {
                         <Link to="/courses/finance" className="text-decoration-none text-dark">Finance</Link>
                     </li>
                     <li className={getClassNames('project-management')}>
-                        <Link to="/courses/project-management" className="text-decoration-none text-dark">Project Management</Link>
+                        <Link to="/courses/project management" className="text-decoration-none text-dark">Project Management</Link>
                     </li>
                 </ul>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaUsers, FaStar } from 'react-icons/fa';
 import categorie1 from '../assets/categorie1.jpg';
 import person from '../assets/person1.jpg';
+import { Link } from 'react-router-dom';
 
 
 const CourseCard = ({ course }) => {
@@ -26,9 +27,9 @@ const CourseCard = ({ course }) => {
           <img src={person} alt={course.teacherName} className="teacher-image me-2" />
           <span>Oussama Teacher</span>
         </div>
-        <a href="course" className="btn w-100 mt-3 btn-primary d-block text-center text-decoration-none fw-bolder text-white">
+        <Link to="/course" className="btn w-100 mt-3 btn-primary d-block text-center text-decoration-none fw-bolder text-white">
           Learn More
-        </a>
+        </Link>
       </div>
     </div>
   );

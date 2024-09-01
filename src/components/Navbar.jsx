@@ -1,77 +1,89 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS for dropdown functionality
+import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    if (query.trim()) {
+      navigate(`/courses/search/${query}`);
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container-fluid mx-3">
-        <a className="navbar-brand d-flex align-items-center" href="/">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src={logo} alt="Immerse Logo" style={{ height: '40px' }} />
           <span className="fw-bolder m-2">Immerse</span>
-        </a>
+        </Link>
 
         {/* Large Dropdown Menu */}
         <div className="dropdown mx-5 d-lg-inline d-none">
-          <a
-          href="courses"
-            className="text-decoration-none text-white fs-5 dropdown-toggle" 
-            type="button" 
-            id="browseDropdown" 
+          <Link
+            to="/courses/all"
+            className="text-decoration-none text-white fs-5 dropdown-toggle"
+            type="button"
+            id="browseDropdown"
             aria-expanded="false"
           >
             Browse
-          </a>
+          </Link>
           <div className="dropdown-menu" aria-labelledby="browseDropdown" style={{ minWidth: '600px' }}>
             <div className="row g-0">
               {/* Column 1 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Technology</h6>
-                <a className="dropdown-item" href="#">Web Development</a>
-                <a className="dropdown-item" href="#">Data Science</a>
-                <a className="dropdown-item" href="#">Artificial Intelligence</a>
-                <a className="dropdown-item" href="#">CyberSecurity</a>
+                <Link className="dropdown-item" to="/courses/web-development">Web Development</Link>
+                <Link className="dropdown-item" to="/courses/data-science">Data Science</Link>
+                <Link className="dropdown-item" to="/courses/artificial-intelligence">Artificial Intelligence</Link>
+                <Link className="dropdown-item" to="/courses/cybersecurity">CyberSecurity</Link>
               </div>
               {/* Column 2 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Business</h6>
-                <a className="dropdown-item" href="#">Marketing</a>
-                <a className="dropdown-item" href="#">Finance</a>
-                <a className="dropdown-item" href="#">Project Management</a>
+                <Link className="dropdown-item" to="/courses/marketing">Marketing</Link>
+                <Link className="dropdown-item" to="/courses/finance">Finance</Link>
+                <Link className="dropdown-item" to="/courses/project-management">Project Management</Link>
               </div>
               {/* Column 3 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Science</h6>
-                <a className="dropdown-item" href="#">Biology</a>
-                <a className="dropdown-item" href="#">Chemistry</a>
-                <a className="dropdown-item" href="#">Geology</a>
-                <a className="dropdown-item" href="#">Physics</a>
+                <Link className="dropdown-item" to="/courses/biology">Biology</Link>
+                <Link className="dropdown-item" to="/courses/chemistry">Chemistry</Link>
+                <Link className="dropdown-item" to="/courses/geology">Geology</Link>
+                <Link className="dropdown-item" to="/courses/physics">Physics</Link>
               </div>
             </div>
           </div>
         </div>
 
-        <form className="d-flex position-relative mx-5 order-lg-1 d-lg-inline d-none" role="search" style={{ width: '400px' }}>
+        <form className="d-flex position-relative mx-5 order-lg-1 d-lg-inline d-none" role="search" style={{ width: '400px' }} onSubmit={handleSearch}>
           <input 
-            className="form-control pe-5" 
+            className="form-control pe-5 bg-transparent text-white border-white placeholder-white" 
             type="search" 
             placeholder="What do you wanna learn?" 
-            aria-label="Search" 
+            aria-label="Search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
-          <i 
-            className="fa-solid fa-magnifying-glass position-absolute" 
-            style={{ right: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d', cursor: 'pointer' }}
-          ></i>
+          <button 
+            type="submit" 
+            className="fa-solid fa-magnifying-glass position-absolute fa-lg text-white bg-transparent border-0"
+            style={{ right: '15px', top: '50%', cursor: 'pointer' }}
+          ></button>
         </form>
 
         <div className="collapse navbar-collapse order-lg-2" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item px-3">
-              <a className="nav-link fs-6" href="http://localhost:5174/sign-in">Sign In</a>
+              <Link className="nav-link fs-6 fw-bold" to="/sign-in">Sign In</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link fs-5" href="http://localhost:5174/sign-up">Sign Up</a>
+            <li className="nav-item bg-primary rounded">
+              <Link className="nav-link fs-5   text-dark fw-bolder" to="/sign-up">Sign Up</Link>
             </li>
           </ul>
         </div>

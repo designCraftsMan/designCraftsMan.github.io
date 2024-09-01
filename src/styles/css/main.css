@@ -63,6 +63,11 @@
   margin-top: 0;
 }
 
+.placeholder-white::placeholder {
+  color: white !important;
+  opacity: 0.8 !important;
+}
+
 .carousel {
   width: 100%;
   overflow: hidden;
